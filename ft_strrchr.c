@@ -1,15 +1,17 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   strrchr.c                                        .::    .:/ .      .::   */
+/*   ft_strrchr.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 15:11:37 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/09 16:06:39 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/13 16:34:42 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
+#include <string.h>
 
 int		ft_strrchr(const char *s, int c)
 {
@@ -25,7 +27,7 @@ int		ft_strrchr(const char *s, int c)
 		}
 		i++;
 	}
-	if (found = 0)
+	if (found == 0)
 		return (0);
 	return (found);
 }

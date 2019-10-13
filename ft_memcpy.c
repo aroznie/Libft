@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   memcpy.c                                         .::    .:/ .      .::   */
+/*   ft_memcpy.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 11:39:56 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 11:34:46 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/13 16:25:42 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void dst, const void src, size_t n)
+#include <string.h>
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*dst2;
 	const char	*src2;

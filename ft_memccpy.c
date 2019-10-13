@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_toupper.c                                     .::    .:/ .      .::   */
+/*   ft_memccpy.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 17:34:39 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 16:08:40 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/09 12:31:33 by arroznie     #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/13 16:17:33 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		ft_toupper(int c)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	unsigned char	*dst2;
+	unsigned char	*src2;
+	int				i;
+
+	dst2 = dst;
+	src2 = (unsigned char*)src;
+	i = 0;
+	while (src2[i] && n > 0)
+	{
+		if (src2[i] == c)
+		{
+			dst2[i] = src2[i];
+			return (&dst[i + 1]);
+		}
+		dst2[i] = src2[i];
+		i++;
+		n--;
+	}
+	return (0);
 }
