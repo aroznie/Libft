@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 10:54:51 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 16:05:19 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/13 17:14:23 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -31,7 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	lendst = ft_strlen(dst);
 	if (size < lendst)
-		return (ft_strlen(src) + size);
+		return (ft_strlen((char *)(src)) + size);
 	while (src[i])
 	{
 		if ((lendst + i) < size - 1)

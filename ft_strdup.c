@@ -6,12 +6,13 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 12:57:40 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 16:04:51 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/13 17:04:29 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {

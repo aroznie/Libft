@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 15:11:37 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 16:34:42 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/13 17:16:22 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -29,5 +29,5 @@ int		ft_strrchr(const char *s, int c)
 	}
 	if (found == 0)
 		return (0);
-	return (found);
+	return ((int)found);
 }
