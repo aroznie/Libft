@@ -6,14 +6,14 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 10:54:51 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 17:14:23 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/13 21:50:19 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		ft_strlen(char *str)
+static int		ft_strlen(char *str)
 {
 	int i;
 
@@ -23,7 +23,7 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t			ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	lendst;
 	size_t	i;
@@ -31,7 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	lendst = ft_strlen(dst);
 	if (size < lendst)
-		return (ft_strlen((char *)(src)) + size);
+		return (ft_strlen((char *)src) + size);
 	while (src[i])
 	{
 		if ((lendst + i) < size - 1)
@@ -41,6 +41,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	if (lendst + i <= size - 1)
-		dst[lendst + i] = '\n';
+		dst[lendst + i] = '\0';
 	return (lendst + i);
 }

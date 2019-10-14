@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_memcpy.c                                      .::    .:/ .      .::   */
+/*   ft_calloc.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/09 11:39:56 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 21:01:14 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/14 03:56:07 by arroznie     #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/14 05:26:48 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char		*dst2;
-	const char	*src2;
-	size_t		i;
+	char *str;
 
-	i = 0;
-	dst2 = dst;
-	src2 = src;
-	while (n > i)
+	if (!(str = malloc(count * size)))
+		return (0);
+	while (count > 0)
 	{
-		dst2[i] = src2[i];
-		i++;
+		str[count - 1] = 0;
+		count--;
 	}
-	return (dst2);
+	return ((void *)str);
 }
