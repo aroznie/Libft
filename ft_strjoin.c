@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strchr.c                                      .::    .:/ .      .::   */
+/*   ft_strjoin.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/09 13:41:49 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 14:50:13 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/16 15:12:21 by arroznie     #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/16 15:38:37 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	char	*s1;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
+	char			*s3;
 
 	i = 0;
-	s1 = (char *)s;
+	j = 0;
+	k = 0;
 	while (s1[i])
-	{
-		if (s[i] == c)
-		{
-			return (s1 + i);
-		}
 		i++;
+	while (s2[j])
+		j++;
+	if (!(s3 = malloc(sizeof(char) * (i + j + 1))))
+		return (0);
+	while (k < (i + j))
+	{
+		if (k < i)
+			s3[k] = s1[k];
+		else
+			s3[k] = s2[k - i];
+		k++;
 	}
-	if (s1[i] == c)
-		return (s1 + i);
-	return (0);
+	s3[k] = '\0';
+	return (s3);
 }

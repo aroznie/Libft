@@ -6,13 +6,14 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 19:44:20 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 22:34:41 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/16 19:21:11 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <string.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t size);
@@ -38,5 +39,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
