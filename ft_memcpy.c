@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 11:39:56 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 21:01:14 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/25 18:28:01 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,6 +22,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	dst2 = dst;
 	src2 = src;
+	if (dst == 0 && src == 0)
+		return (dst);
 	while (n > i)
 	{
 		dst2[i] = src2[i];

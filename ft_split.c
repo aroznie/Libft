@@ -1,9 +1,25 @@
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   ft_split.c                                       .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2019/10/25 16:14:02 by arroznie     #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/25 16:44:31 by arroznie    ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include <string.h>
+#include "libft.h"
 
 static char	**tab_crea(const char *s, char c)
 {
-	int	count;
-	int	i;
-	char	**str
+	int		count;
+	int		i;
+	char	**str;
 
 	i = 0;
 	count = 1;
@@ -23,8 +39,8 @@ static char	**tab_crea(const char *s, char c)
 
 static char	*ft_fillstr(const char *s, char c, int i)
 {
-	int	j;
-	int	k;
+	int		j;
+	int		k;
 	char	*str;
 
 	j = 0;
@@ -34,7 +50,7 @@ static char	*ft_fillstr(const char *s, char c, int i)
 		i++;
 	}
 	if (!(str = malloc(sizeof(char) * (j + 1))))
-		return (0)
+		return (0);
 	k = j;
 	while (j > 0)
 	{
@@ -45,7 +61,7 @@ static char	*ft_fillstr(const char *s, char c, int i)
 	return (str);
 }
 
-char	**ft_free(char **str, int count)
+char		**ft_free(char **str, int count)
 {
 	while (count > 0)
 	{
@@ -56,10 +72,10 @@ char	**ft_free(char **str, int count)
 	return (0);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
-	int	i;
-	int	count;
+	int		i;
+	int		count;
 	char	**str;
 
 	i = 0;
