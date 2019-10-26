@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 14:12:08 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 05:42:08 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/26 11:38:47 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -26,6 +26,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		while (str1[i] == str2[i] && i < (n - 1))
 		{
+			if (str1[i] == '\0')
+				return (0);
 			i++;
 		}
 	}

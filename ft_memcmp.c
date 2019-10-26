@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:41:26 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 16:21:31 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/26 11:34:43 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,7 +24,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	tmp2 = (unsigned char*)s2;
 	if (n == 0)
 		return (0);
-	while (tmp1[i] == tmp2[i] && tmp1[i] && tmp2[i] && i < (n - 1))
+	while (tmp1[i] == tmp2[i] && i < (n - 1))
 	{
 		i++;
 	}

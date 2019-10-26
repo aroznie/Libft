@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 11:49:34 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 14:49:06 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/26 11:54:14 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,7 @@ int		ft_atoi(const char *str)
 {
 	int i;
 	int negatif;
-	int resultat;
+	long long resultat;
 
 	i = 0;
 	negatif = 1;
@@ -38,5 +38,5 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	resultat *= negatif;
-	return (resultat);
+	return ((int)resultat);
 }

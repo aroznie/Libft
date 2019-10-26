@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 11:15:07 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 17:20:50 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/26 11:45:14 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
 	while (haystack[i] && i < len)
 	{
 		j = 0;
