@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/25 16:38:32 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 16:43:27 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/26 15:34:44 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,9 +18,9 @@ static int	sizeofstring(int n)
 {
 	int count;
 
-	count = 2;
+	count = 1;
 	if (n > 0)
-		count = 1;
+		count = 0;
 	while (n != 0)
 	{
 		n = n / 10;
@@ -37,16 +37,17 @@ char		*ft_itoa(int n)
 
 	temp = n;
 	count = sizeofstring(n);
-	if (!(s = malloc(sizeof(char) * count)))
+	if (!(s = malloc(sizeof(char) * (count + 1))))
 		return (0);
 	if (n < 0)
 	{
 		s[0] = '-';
 		temp = -temp;
 	}
-	while ((n < 0 && count > 2) || (n >= 0 && count > 1))
+	s[count] = '\0';
+	while ((n < 0 && count > 1) || (n >= 0 && count > 0))
 	{
-		s[count - 2] = (temp % 10) + 48;
+		s[count - 1] = (temp % 10) + 48;
 		temp = temp / 10;
 		count--;
 	}
