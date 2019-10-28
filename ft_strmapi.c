@@ -21,12 +21,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i])
 		i++;
-	if (!(s2 = malloc(sizeof(char) * i)))
+	if (!(s2 = malloc(sizeof(char) * (i + 1))))
 		return (0);
 	s2[i] = '\0';
 	while (i > 0)
 	{
-		s2[i] = f(i, s[i]);
+		s2[i - 1] = f((i - 1), s[i - 1]);
 		i--;
 	}
 	return (s2);
