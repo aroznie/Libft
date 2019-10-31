@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/16 16:12:01 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/18 15:02:52 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 14:10:58 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -62,6 +62,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*str;
 
+	if (s1 == NULL || set == NULL)
+		return (0);
 	i = 0;
 	start = ft_strtrimstart(s1, set);
 	end = ft_strtrimend(s1, set);

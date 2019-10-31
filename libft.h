@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 19:44:20 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 16:46:47 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/31 14:53:51 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef struct	s_list
+{
+		void	*content;
+		struct	s_list *next;
+}				t_list;
+
+t_list	*ft_lstnew(void *content);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t size);
 void	*ft_calloc(size_t count, size_t size);

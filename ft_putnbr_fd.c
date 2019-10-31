@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strmapi.c                                     .::    .:/ .      .::   */
+/*   ft_putnbr_fd.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/25 16:08:13 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 14:20:53 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/29 14:29:00 by arroznie     #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/29 15:58:17 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	i;
-	char			*s2;
+	long temp;
 
-	if (s == NULL)
-		return (0);
-	i = 0;
-	while (s[i])
-		i++;
-	if (!(s2 = malloc(sizeof(char) * (i + 1))))
-		return (0);
-	s2[i] = '\0';
-	while (i > 0)
+	temp = n;
+	if (temp < 0)
 	{
-		s2[i - 1] = f((i - 1), s[i - 1]);
-		i--;
+		ft_putchar_fd('-', fd);
+		temp = -temp;
 	}
-	return (s2);
+	if (temp > 9)
+		ft_putnbr_fd(temp / 10, fd);
+	ft_putchar_fd((temp % 10) + 48, fd);
 }

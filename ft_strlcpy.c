@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 12:07:00 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 14:23:49 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 14:05:43 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,6 +27,8 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
+	if (dst == NULL || src == NULL)
+		return (0);
 	i = 0;
 	if (size == 0)
 		return (ft_strlen((char *)src));

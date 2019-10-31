@@ -6,38 +6,36 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/25 16:14:02 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 16:44:31 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/31 15:54:46 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
-static char	**tab_crea(const char *s, char c)
+static char	**ft_ttabcrea(char const *s, char c)
 {
-	int		count;
 	int		i;
+	int		line;
 	char	**str;
 
 	i = 0;
-	count = 1;
+	line = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
 		if (s[i] != c && s[i])
-			count++;
+			line++;
 		while (s[i] != c && s[i])
 			i++;
 	}
-	if (!(str = malloc(sizeof(char *) * count)))
-		return (0);
+	if (!(str = malloc(sizeof(char *) * (line + 1))))
+		return (NULL);
 	return (str);
 }
 
-static char	*ft_fillstr(const char *s, char c, int i)
+static char	*ft_fillstr(char const *s, char c, int i)
 {
 	int		j;
 	int		k;
@@ -50,7 +48,7 @@ static char	*ft_fillstr(const char *s, char c, int i)
 		i++;
 	}
 	if (!(str = malloc(sizeof(char) * (j + 1))))
-		return (0);
+		return (NULL);
 	k = j;
 	while (j > 0)
 	{
@@ -61,39 +59,41 @@ static char	*ft_fillstr(const char *s, char c, int i)
 	return (str);
 }
 
-char		**ft_free(char **str, int count)
+static char	**ft_free_error(char **str, int line)
 {
-	while (count > 0)
+	while (line > 0)
 	{
-		free(str[count - 1]);
-		count--;
+		free(str[line - 1]);
+		line--;
 	}
-	free(str[count - 1]);
-	return (0);
+	free(str);
+	return (NULL);
 }
 
 char		**ft_split(char const *s, char c)
 {
 	int		i;
-	int		count;
+	int		line;
 	char	**str;
 
+	if (s == NULL)
+		return (0);
+	str = ft_ttabcrea(s, c);
 	i = 0;
-	count = 0;
-	str = tab_crea(s, c);
+	line = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
 		if (s[i] && s[i] != c)
 		{
-			count++;
-			if (!(str[count - 1] = ft_fillstr(s, c, i)))
-				return (ft_free(str, count - 1));
+			line++;
+			if (!(str[line - 1] = ft_fillstr(s, c, i)))
+				return (ft_free_error(str, line - 1));
 		}
 		while (s[i] != c && s[i])
 			i++;
 	}
-	str[count] = 0;
+	str[line] = NULL;
 	return (str);
 }

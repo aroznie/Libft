@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 06:03:43 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/26 12:44:32 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 14:08:25 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*s1;
 	unsigned int	i;
 
+	if (s == NULL)
+		return (0);
 	i = 0;
 	if (ft_strlen(s) <= (size_t)start)
 		len = 0;
