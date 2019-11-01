@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 19:44:20 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 14:53:51 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/31 17:53:38 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,6 +23,7 @@ typedef struct	s_list
 		struct	s_list *next;
 }				t_list;
 
+void	ft_lstadd_front(t_list **alst, t_list *new);
 t_list	*ft_lstnew(void *content);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t size);
