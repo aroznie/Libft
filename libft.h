@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 19:44:20 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 17:53:38 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/04 18:21:17 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,12 +17,15 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef	struct	s_list
 {
-		void	*content;
-		struct	s_list *next;
+	void	*content;
+	struct s_list *next;
 }				t_list;
 
+void	ft_lstadd_back(t_list **alst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **alst, t_list *new);
 t_list	*ft_lstnew(void *content);
 int		ft_atoi(const char *str);
