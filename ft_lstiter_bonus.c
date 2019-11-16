@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_substr.c                                      .::    .:/ .      .::   */
+/*   ft_lstiter_bonus.c                               .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/14 06:03:43 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/16 15:42:59 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/11/12 14:17:57 by arroznie     #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/12 14:19:24 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char			*s1;
-	unsigned int	i;
-
-	if (s == NULL)
-		return (0);
-	i = 0;
-	if (ft_strlen(s) <= start)
-		len = 0;
-	if (!(s1 = malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	while ((i < len) && s[start + i])
+	while (lst && f)
 	{
-		s1[i] = s[start + i];
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	s1[i] = '\0';
-	return (s1);
 }

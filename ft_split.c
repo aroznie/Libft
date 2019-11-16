@@ -6,14 +6,14 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/25 16:14:02 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 15:54:46 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/16 16:04:23 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_ttabcrea(char const *s, char c)
+static char	**ft_malloctab(char const *s, char c)
 {
 	int		i;
 	int		line;
@@ -78,7 +78,7 @@ char		**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (0);
-	str = ft_ttabcrea(s, c);
+	str = ft_malloctab(s, c);
 	i = 0;
 	line = 0;
 	while (s[i])

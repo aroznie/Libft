@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_substr.c                                      .::    .:/ .      .::   */
+/*   ft_lstmap_bonus.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/14 06:03:43 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/16 15:42:59 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/11/12 14:47:55 by arroznie     #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/12 19:03:43 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char			*s1;
-	unsigned int	i;
+	t_list *newlst;
+	t_list *start;
 
-	if (s == NULL)
-		return (0);
-	i = 0;
-	if (ft_strlen(s) <= start)
-		len = 0;
-	if (!(s1 = malloc(sizeof(char) * (len + 1))))
+	if (!lst)
 		return (NULL);
-	while ((i < len) && s[start + i])
+	if (!(newlst = ft_lstnew(f(lst->content))))
+		return (NULL);
+	start = newlst;
+	while (lst)
 	{
-		s1[i] = s[start + i];
-		i++;
+		if (lst->next)
+		{
+			if (!(newlst->next = ft_lstnew(f(lst->next->content))))
+			{
+				ft_lstclear(&start, del);
+				return (NULL);
+			}
+			newlst = newlst->next;
+		}
+		lst = lst->next;
 	}
-	s1[i] = '\0';
-	return (s1);
+	newlst->next = NULL;
+	return (start);
 }

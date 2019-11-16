@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 03:56:07 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/26 12:33:26 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 17:41:33 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,10 +16,10 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char *str;
+	unsigned char *str;
 
 	if (!(str = malloc(count * size)))
-		return (0);
+		return (NULL);
 	ft_bzero(str, count * size);
 	return ((void *)str);
 }

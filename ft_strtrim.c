@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/16 16:12:01 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 14:10:58 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/16 16:38:08 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -67,11 +67,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = ft_strtrimstart(s1, set);
 	end = ft_strtrimend(s1, set);
-	if (start > end)
-	{
-		str = "";
-		return (str);
-	}
+	if (end < start)
+		start = end;
 	if (!(str = malloc(sizeof(char) * (end - start + 1))))
 		return (NULL);
 	while (i + start < end)

@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 13:41:49 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 14:50:13 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 17:15:21 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,12 +23,10 @@ char	*ft_strchr(const char *s, int c)
 	while (s1[i])
 	{
 		if (s[i] == c)
-		{
 			return (s1 + i);
-		}
 		i++;
 	}
 	if (s1[i] == c)
 		return (s1 + i);
-	return (0);
+	return (NULL);
 }

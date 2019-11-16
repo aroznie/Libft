@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/01 06:05:06 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/01 06:16:14 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 18:10:49 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,7 +20,7 @@ int		ft_lstsize(t_list *lst)
 	if (lst != NULL)
 	{
 		i = 1;
-		while (lst->next != 0)
+		while (lst->next != NULL)
 		{
 			i++;
 			lst = lst->next;

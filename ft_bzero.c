@@ -5,24 +5,15 @@
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 17:58:24 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 16:14:19 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/11/16 16:11:35 by arroznie     #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/16 16:11:39 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	char	*str;
-
-	i = 0;
-	str = s;
-	while (n != 0 && i < n)
-	{
-		str[i] = 0;
-		i++;
-	}
+	ft_memset(s, 0, n);
 }

@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/25 16:38:32 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/26 15:34:44 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 19:28:40 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,7 +38,7 @@ char		*ft_itoa(int n)
 	temp = n;
 	count = sizeofstring(n);
 	if (!(s = malloc(sizeof(char) * (count + 1))))
-		return (0);
+		return (NULL);
 	if (n < 0)
 	{
 		s[0] = '-';

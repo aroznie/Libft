@@ -6,24 +6,20 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 15:11:37 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 23:05:09 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 17:24:14 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	while (i != 0 && s[i] != c)
-	{
+	i = ft_strlen(s);
+	while (i >= 0 && s[i] != c)
 		i--;
-	}
 	if (s[i] == c)
 		return ((char *)&s[i]);
 	return (0);

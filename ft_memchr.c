@@ -6,12 +6,12 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 12:25:15 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 22:28:38 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/14 15:37:05 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

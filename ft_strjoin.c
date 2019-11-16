@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/16 15:12:21 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 16:00:56 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 17:45:10 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = ft_strlen(s2);
 	k = 0;
 	if (!(s3 = malloc(sizeof(char) * (i + j + 1))))
-		return (0);
+		return (NULL);
 	while (k < (i + j))
 	{
 		if (k < i)
