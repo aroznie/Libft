@@ -6,12 +6,11 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 03:56:07 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 17:41:33 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/19 20:29:15 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)

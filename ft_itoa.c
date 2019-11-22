@@ -6,13 +6,12 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/25 16:38:32 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 19:28:40 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/19 20:30:27 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 static int	sizeofstring(int n)
 {

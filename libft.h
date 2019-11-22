@@ -6,7 +6,7 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 19:44:20 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/14 15:24:31 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/22 18:59:33 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,6 +23,8 @@ typedef	struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+	void (*del)(void *));
 t_list			ft_lstlist(t_list *lst, void *(*f)(void *),
 	void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));

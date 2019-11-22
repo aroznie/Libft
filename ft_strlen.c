@@ -6,12 +6,12 @@
 /*   By: arroznie <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:36:43 by arroznie     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 16:03:52 by arroznie    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/19 16:07:21 by arroznie    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
